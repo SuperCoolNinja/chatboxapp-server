@@ -27,15 +27,17 @@ const io = new Server(server, {
   cors: {
     origin: "*",
     methods: ["GET", "POST"],
-  },
+  }
 });
 
-app.get("/", (req, res) => res.send("Hello world!"));
+app.get("/", (req, res) => {
+  res.send("Hello, this is the root path!");
+});
 
-// handle all events :
+// Handle all events:
 handle_events(io);
 
-// Setup serveur :
+// Setup server:
 server.listen(Server_PORT, () =>
   console.log(`Server listening on port ${Server_PORT}`)
 );
