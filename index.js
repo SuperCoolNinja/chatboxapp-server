@@ -17,7 +17,7 @@ const Server_PORT = process.env.PORT || 4000;
 app.use(helmet());
 app.use(
   cors({
-    orgin: "*",
+    origin: "*",
     methods: ["GET", "POST", "DELETE", "UPDATE", "PUT", "PATCH"],
   })
 );
